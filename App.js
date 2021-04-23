@@ -1,8 +1,8 @@
 import React from "react";
 import * as Font from "expo-font";
 
-import Home from "./screens/Home";
 import AppLoading from "expo-app-loading";
+import Navigator from "./routes/homeStack";
 
 // load fonts from assets
 const getFonts = () =>
@@ -15,7 +15,7 @@ export default function App() {
     const [fontsLoaded, setFontsLoaded] = React.useState(false);
 
     if (fontsLoaded) {
-        return <Home />;
+        return <Navigator />;
     } else {
         return (
             <AppLoading
