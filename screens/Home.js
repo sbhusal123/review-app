@@ -8,7 +8,9 @@ import {
     Modal,
     StyleSheet
 } from "react-native";
+
 import Card from "../shared/card";
+import ReviewForm from "./ReviewForm";
 
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -48,7 +50,7 @@ export default function Home({ navigation }) {
                         style={{ ...styles.modalToggle, ...styles.modalClose }}
                         onPress={() => setModalOpen(false)}
                     />
-                    <Text>Hello from modal</Text>
+                    <ReviewForm />
                 </View>
             </Modal>
 
