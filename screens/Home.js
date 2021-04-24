@@ -38,12 +38,8 @@ export default function Home({ navigation }) {
     return (
         <View style={globalStyles.container}>
             {/* Modal */}
-            <Modal
-                visible={modalOpen}
-                animationType="slide"
-                style={styles.modalContent}
-            >
-                <View>
+            <Modal visible={modalOpen} animationType="slide">
+                <View style={styles.modalContent}>
                     <MaterialIcons
                         name="close"
                         size={24}
