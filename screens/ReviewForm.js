@@ -5,7 +5,7 @@ import { Formik } from "formik";
 
 import { globalStyles } from "../styles/global";
 
-export default function ReviewForm() {
+export default function ReviewForm({ addReview }) {
     return (
         <View style={globalStyles.container}>
             <Formik
@@ -15,7 +15,7 @@ export default function ReviewForm() {
                     rating: ""
                 }}
                 onSubmit={values => {
-                    console.log(values);
+                    addReview(values);
                 }}
             >
                 {formikProps => (

@@ -35,6 +35,14 @@ export default function Home({ navigation }) {
 
     const [modalOpen, setModalOpen] = React.useState(false);
 
+    const addReview = review => {
+        review.key = reviews.length + 1;
+        setReviews(prevReviews => {
+            return [review, ...prevReviews];
+        });
+        setModalOpen(false);
+    };
+
     return (
         <View style={globalStyles.container}>
             {/* Modal */}
@@ -46,7 +54,7 @@ export default function Home({ navigation }) {
                         style={{ ...styles.modalToggle, ...styles.modalClose }}
                         onPress={() => setModalOpen(false)}
                     />
-                    <ReviewForm />
+                    <ReviewForm addReview={addReview} />
                 </View>
             </Modal>
 
