@@ -29,3 +29,4 @@ export default function App() {
 
 console.warn = () => {};
 console.log = () => {};
+console.error = () => {};
