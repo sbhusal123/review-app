@@ -1,6 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
 
+import { ImageBackground } from "react-native";
+
 // Screens
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
@@ -33,11 +35,20 @@ const screens = {
 
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
-        headerTintColor: "teal",
+        headerTintColor: "#444",
         headerStyle: {
             backgroundColor: "#eee",
-            height: 80
-        }
+            height: 70
+        },
+        headerBackground: (
+            <ImageBackground
+                source={require("../assets/images/game_bg.png")}
+                style={{
+                    width: "100%",
+                    height: "100%"
+                }}
+            />
+        )
     }
 });
 
